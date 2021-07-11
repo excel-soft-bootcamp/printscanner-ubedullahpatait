@@ -9,14 +9,30 @@ namespace PrintScan
     class PrintScanner: IPrinter,IScanner
 
     {
-       public  Scanner scan(Scanner _scan)
+       IPrinter printer;
+
+        IScanner scanner;
+        public void SetPrinter(IPrinter printerRef)
         {
-            return _scan;  
+            this.printer = printerRef;
+        }
+        public void SetScanner(IScanner scanRef)
+        {
+
+            this.scanner = scanRef;
         }
 
-        public Printer print(Printer _print)
+
+        public void Print()
         {
-            return _print;
+          
+            this.printer.Print();
+        }
+
+        public void Scan()
+        {
+          
+            this.scanner.Scan();
         }
        
 
