@@ -12,18 +12,25 @@ namespace PrintScan
 
 
         {
-            Printer _printerRef = new Printer();
-            Scanner _scannerRef = new Scanner();
+          Printer printer = new Printer();
+            Scanner scanner = new Scanner();
+            NanoLaserPrinter nanoLaserPrinter = new NanoLaserPrinter();
 
-            PrintManager _printManager = new PrintManager();
-            _printManager.PrintDocument(_printerRef);
+            PrintManager printManager = new PrintManager();
+            printManager.PrintDocument(printer);
 
-            ScanManager _scanManager = new ScanManager();
-            _scanManager.ScanDocument(_scannerRef);
+            ScanManager scanManager = new ScanManager();
+            scanManager.ScanDocument(scanner);
 
-            PrintScanner _printScanner = new PrintScanner();
-            _printManager.PrintDocument(_printScanner);
-            _scanManager.ScanDocument(_printScanner);
+            PrintScanner printScan = new PrintScanner();
+            printScan.SetPrinter(printer);
+            
+            printScan.SetScanner(scanner);
+
+            printManager.PrintDocument(printScan);
+            scanManager.ScanDocument(printScan);
+
+            Console.ReadKey();
 
 
 
