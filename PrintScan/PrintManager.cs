@@ -9,10 +9,11 @@ namespace PrintScan
     class PrintManager
     {
 
-        public void PrintDocument(Printer printer)
+       public void PrintDocument(IPrinter printer)
         {
             printer.Print();
         }
+
 
     }
 }
