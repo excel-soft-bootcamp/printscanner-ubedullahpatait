@@ -8,7 +8,7 @@ namespace PrintScan
 {
      interface IScanner
     {
-        Scanner scan(Scanner _scan);
+        void scan();
 
     }
 }
