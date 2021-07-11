@@ -8,6 +8,6 @@ namespace PrintScan
 {
     interface IPrinter
     {
-        Printer print(Printer _printer);
+        void print();
     }
 }
