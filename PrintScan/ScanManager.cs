@@ -9,7 +9,7 @@ namespace PrintScan
     class ScanManager
     {
 
-        public void ScanDocument(Scanner scaner)
+        public void ScanDocument(IScanner scaner)
         {
             scaner.Scan();
         }
